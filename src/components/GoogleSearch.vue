@@ -24,8 +24,8 @@
           v-for="item in Response"
           :key="item.title"
         >
-          <p>{{ item.link }}</p>
-          <a :href="item.link">{{ item.title }}</a>
+          <p class="link">{{ item.link }}</p>
+          <a :href="item.link" class="titlelink">{{ item.title }}</a>
           <p class="description">{{ item.snippet }}</p>
         </li>
       </ul>
@@ -40,8 +40,8 @@ export default {
     return {
       keyword: "",
       Response: [],
-      apikey: "AIzaSyDs_URP_rRDeb3p5hM5VgPeSmAytoedSvU",
-      cx: "2b8db22af3e34c7ea",
+      apikey: "",
+      cx: "",
     };
   },
   methods: {
@@ -59,4 +59,24 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.link {
+  color: #202124;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  margin-bottom: 3px;
+  padding: 0px;
+}
+.description {
+  color: #202124;
+  text-align: left;
+  line-height: 1.58;
+  max-width: 48em;
+  margin: 0px;
+}
+.titlelink {
+  margin: 0px;
+  text-align: left;
+}
+</style>
